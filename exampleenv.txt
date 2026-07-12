@@ -1,0 +1,7 @@
+DATABASE_URL=postgresql://username:password@localhost:5432/dbname
+OLLAMA_MODEL=qwen2.5:7b
+SEND_EMAIL=true
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=585
+SMTP_USER=
+SMTP_PASSWORD=

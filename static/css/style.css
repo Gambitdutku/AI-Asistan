@@ -1,0 +1,62 @@
+:root {
+    --primary: #009CFF;
+    --secondary: #777777;
+    --light: #F8F8F8;
+    --dark: #252525;
+}
+
+body {
+    background-color: var(--light);
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+.section-title::before, .section-title::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background: var(--primary);
+    z-index: -1;
+}
+.section-title::before {
+    width: calc(100% + 40px);
+    top: 4px;
+    left: -20px;
+}
+
+.chat-container, .calendar-container {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .05);
+}
+
+.chat-box {
+    scroll-behavior: smooth;
+}
+
+.appointment-card {
+    border-left: 4px solid var(--primary);
+    transition: 0.3s;
+}
+.appointment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
